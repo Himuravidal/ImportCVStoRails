@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+  </head>
+  <body>
+
+    <%= flash[:notice] %>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Codigo de Cuenta</th>
+          <th scope="col">Rut</th>
+          <th scope="col">Digito verificador</th>
+          <th scope="col">Cliente o proveedor</th>
+          <th scope="col">Dia de emisión</th>
+          <th scope="col">Mes de emisión</th>
+          <th scope="col">Año de emisión</th>
+          <th scope="col">Numero de Documento</th>
+          <th scope="col">Numero de Detalle</th>
+          <th scope="col">Tipo de documento</th>
+          <th scope="col">Codigo de detalle</th>
+          <th scope="col">Valor neto</th>
+          <th scope="col">IVA</th>
+          <th scope="col">Centro de costo</th>
+          <th scope="col">CP mensual</th>
+          <th scope="col">CP anual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sails.each do |sail| %>
+        <tr>
+          <td><%= sail.CountCode %></td>
+          <td><%= sail.Rut %></td>
+          <td><%= sail.VD %></td>
+          <td><%= sail.Client %></td>
+          <td><%= sail.EmisionDay %></td>
+          <td><%= sail.EmisionMonth %></td>
+          <td><%= sail.EmisionYear %></td>
+          <td><%= sail.DocumentNumber %></td>
+          <td><%= sail.DetailNumber %></td>
+          <td><%= sail.DocumentType %></td>
+          <td><%= sail.DetailCodenumber %></td>
+          <td><%= sail.NetValue %></td>
+          <td><%= sail.Iva %></td>
+          <td><%= sail.CostCenter %></td>
+          <td><%= sail.Cpmonth %></td>
+          <td><%= sail.Cpyear %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+
+    <div class="form-group">
+      <h4>Import data</h4>
+      <%= form_tag import_sails_path, multipart: true do %>
+        <%= file_field_tag :file %>
+        <%= submit_tag "Import CSV" %>
+      <% end %>
+    </div>
+  </body>
+</html>

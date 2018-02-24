@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CountCode: MyString
+  Rut: MyString
+  VD: MyString
+  Client: MyString
+  EmisionDay: MyString
+  EmisionMonth: 1
+  EmisionYear: 1
+  DocumentNumber: 1
+  DetailNumber: 1
+  DocumentType: 1
+  DetailCodenumber: MyString
+  NetValue: 1
+  Iva: 1
+  CostCenter: 1
+  CPmonth: 1
+  CPyear: 1
+
+two:
+  CountCode: MyString
+  Rut: MyString
+  VD: MyString
+  Client: MyString
+  EmisionDay: MyString
+  EmisionMonth: 1
+  EmisionYear: 1
+  DocumentNumber: 1
+  DetailNumber: 1
+  DocumentType: 1
+  DetailCodenumber: MyString
+  NetValue: 1
+  Iva: 1
+  CostCenter: 1
+  CPmonth: 1
+  CPyear: 1
