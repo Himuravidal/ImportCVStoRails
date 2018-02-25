@@ -8,12 +8,12 @@ class CreateSails < ActiveRecord::Migration[5.1]
       t.string :EmisionDay
       t.integer :EmisionMonth
       t.integer :EmisionYear
-      t.integer :DocumentNumber
-      t.integer :DetailNumber
+      t.float  :DocumentNumber
+      t.float :DetailNumber
       t.integer :DocumentType
-      t.string :DetailCodenumber
-      t.integer :NetValue
-      t.integer :Iva
+      t.float :DetailCodenumber
+      t.float :NetValue
+      t.float :Iva
       t.integer :CostCenter
       t.integer :Cpmonth
       t.integer :Cpyear

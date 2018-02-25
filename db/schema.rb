@@ -10,9 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180224025441) do
+ActiveRecord::Schema.define(version: 20180224013810) do
 
-  create_table "Sails", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "sails", force: :cascade do |t|
     t.string "CountCode"
     t.string "Rut"
     t.string "VD"
@@ -21,11 +24,11 @@ ActiveRecord::Schema.define(version: 20180224025441) do
     t.integer "EmisionMonth"
     t.integer "EmisionYear"
     t.float "DocumentNumber"
-    t.integer "DetailNumber"
+    t.float "DetailNumber"
     t.integer "DocumentType"
-    t.string "DetailCodenumber"
-    t.integer "NetValue"
-    t.integer "Iva"
+    t.float "DetailCodenumber"
+    t.float "NetValue"
+    t.float "Iva"
     t.integer "CostCenter"
     t.integer "Cpmonth"
     t.integer "Cpyear"
