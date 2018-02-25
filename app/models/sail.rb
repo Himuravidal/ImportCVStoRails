@@ -7,4 +7,13 @@ def self.import(file)
   end
 end
 
+def self.to_csv(options = {})
+  CSV.generate(options) do |csv|
+    csv << column_names
+    all.each do |sails|
+      csv << sails.attributes.values
+    end
+  end
+end
+
 end
